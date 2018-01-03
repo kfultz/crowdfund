@@ -1,0 +1,91 @@
+=begin
+funding1 = 1000
+funding2 = 546
+funding3 = 295
+
+project_1 = 'ABC'
+project_2 = 'LMN'
+project_3 = 'XYZ'
+
+puts "Projects: \n\t#{project_1} \n\t#{project_2} \n\t#{project_3}"
+
+puts "#{project_1} has $#{funding1} in funding."
+puts "#{project_2} has $#{funding2} in funding.".center(50, "*")
+puts "#{project_3.ljust(30, ".")} $#{funding3}"
+=end
+
+
+=begin
+def list_funding (project, dollars)
+	puts "The #{project} project currently has $#{"%.2f" % dollars} in funding."
+end
+
+list_funding("ABC", 1000)
+list_funding("LMN", 546)
+list_funding("XYZ", 295)
+=end
+
+=begin
+Allow access to a project's funding and target funding amount
+Allow a project's name to be changed (read and written both)
+Calculate the total funding still needed for a project (computed as the target funding amount minus current funding)
+=end
+
+=begin
+Print out the number of projects in your array.
+
+Iterate through your projects and print each project's specific information.
+
+Iterate through your projects and print out the target funding amount of each project.
+
+Iterate through your projects adding or removing funds from each project and then print out their revised information.
+
+Let's say that if a project hasn't accumulated enough funding, then that project should be removed from the array. 
+So remove one project from your list, add a new project, and print out an updated list of project information.
+=end
+
+=begin
+Give your collection of projects a name, such as "VC-Friendly Start-up Projects."
+
+Add your projects to an array so that you can deal with them all together.
+
+Add a method similar to the play method (you could call it request_funding, for example) that iterates through the projects, prints out each project's 
+information, adds or removes funds for each project, and then prints out the updated information.
+=end
+
+=begin
+puts project1
+project1.donate
+puts project1
+
+puts project2
+project2.revoke
+puts project2
+
+puts project3
+project3.donate
+project3.revoke
+puts project3
+
+project3.name = "Awesome Project"
+puts project3
+
+puts project2.initial_fund
+puts project2.still_needed
+
+Projects = [project1, project2, project3]
+Projects.each do |project|
+	puts project
+end
+
+Projects.each do |project|
+	project.donate
+	project.donate
+	project.revoke
+	puts project
+end
+
+Projects.each do |project|
+	puts project.still_needed
+end
+=end
