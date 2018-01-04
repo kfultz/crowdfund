@@ -9,12 +9,20 @@ class Fundraising
 		@category = category.capitalize
 		@projects = []
 	end
-
+	
 	#adds project to an array called @projects
 	def add_project(a_project)
 		@projects << a_project
 	end
-
+	
+	def load_projects(from_file)	
+		File.readlines(from_file).each do |line|
+			name, fund, target_fund = line.split(',')
+			a_project = Project.new(name, Integer(fund), Integer(target_fund))
+			add_project(a_project)
+		end
+	end
+	
 	#this method is what runs each project thru a fundraising cycle (begs for money). it takes a parameter equal to the number of rounds set in the crowdfund code
 	def beg(rounds)
 		
