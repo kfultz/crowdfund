@@ -1,12 +1,3 @@
-=begin
-Instead of a one-time request for funding, change your app to allow for multiple rounds of funding requests (or at least until your friends start to avoid you because you're asking them for money a little too often).
-
-When the funding rounds are over, print out the number of projects that are fully-funded and under-funded.
-
-Print off a list of projects that still need contributions, sorted by amount outstanding.
-=end
-
-
 require_relative 'project'
 require_relative 'fundraising'
 
